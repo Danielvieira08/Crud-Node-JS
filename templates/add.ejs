@@ -1,0 +1,52 @@
+<DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+    <title>Painel</title>
+</head>
+
+<body>
+    <div class="container">
+    <header>     
+        <a href="add">Home</a>
+        <a href="/">Estoque</a>
+        <h1>AWSJ</h1>
+        <h1>Cadastrar Produtos</h1>
+    </header>
+    <section>
+        <div class="form-container">
+           <form method="post" action="/">
+                <label>Funcionário
+                    <input type="text" name="funcionario"  value="<%=body.funcionario%>" placeholder="Nome do Funcionário">  
+                </label>
+                <label>Código
+                    <input type="text" name="codigo"  value="<%=body.codigo%>" placeholder="Código">
+                </label>
+                <label>Nome do produto
+                    <input type="text" name="nome"  value="<%=body.nome%>" placeholder="Nome do produto">
+                </label>
+                <label>Ordem de Produção
+                    <input type="text" name="ordem" value="<%=body.ordem%>" placeholder="Ordem de produção">
+                </label>
+                <label>Quantidade
+                    <input type="number" name="quantidade"  value="<%=body.quantidade%>" placeholder="quantidade">
+                </label>
+                <label>Descrição
+                    <input class="desc" type="text" name="descricao"  value="<%=body.descricao%>" placeholder="descrição">
+                </label>
+                <button>Salvar</button>
+            </form> 
+        </div>       
+    </section>
+    <% if(error){ %>
+        <div  class="alert alert-danger alert-dismissible fade show mt-3" >
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong> Erro: </strong><%=error.message%>
+        </div>
+    <%}%>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/style-2.css">
+    <title>Estoque</title>
+</head>
+<body>
+    <header>
+        <a href="add">Home</a>
+        <a href="/">Estoque</a>
+        <h1>AWSJ</h1>
+        <h2>Informações do Estoque</h2>
+    </header>
+    <div class="container">
+        <% for(let i = 0; i < dados.length; i ++) { %>
+            <div  id="<%=dados[i]._id%>">
+                <form method="POST" action="/?_method=DELETE"> 
+                    <h1>Funcionário: <%=dados[i].funcionario%></h1>
+                    <h3>Código: <%=dados[i].codigo%></h3>
+                    <h3>Nome do produto: <%=dados[i].nome%></h3>
+                    <h3>Ordem de Produção: <%=dados[i].ordem%></h3>
+                    <h3>Quantidade: <%=dados[i].quantidade%></h3>
+                    <h3>Descrição: <%=dados[i].descricao%></h3>
+                    <div>
+                    <input name="id" value="<%=dados[i]._id%>" hidden>
+                    <a class="btn-edit" href="/edit/<%=dados[i]._id%>">editar</a>
+                    <button class="btn-del" type="submit">Delete</button><hr>
+                   </div>
+                </form>        
+             </div>
+         <% } %>
+        </div>
+    </div>
+            
+</div>
+</body>
+</html>

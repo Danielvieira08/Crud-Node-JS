@@ -1,7 +1,6 @@
 # Crud-Node-JS
 Crud usando NodeJS, Express para back-end e mongoDB para banco de dados.
-# CRUD-NODEJS
-Crud usando NodeJS, Express para back-end e mongoDB para banco de dados.
+
 
 # :computer: Sobre o Projeto
 
